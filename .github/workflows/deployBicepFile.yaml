@@ -16,7 +16,7 @@ jobs:
         uses: azure/arm-deploy@v1
         with:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-          scope: rg-arthur-ferket
+          scope: resourcegroup
           region: northeurope
           template: ./main.bicep
           parameters: "resourceGroupName=rg-arthur-ferket location=northeurope stSku=Basic"
