@@ -16,10 +16,11 @@ jobs:
         uses: azure/arm-deploy@v1
         with:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+          resourceGroupName: rg-arthur-ferket
           scope: resourcegroup
           region: northeurope
           template: ./main.bicep
-          parameters: "resourceGroupName=rg-arthur-ferket location=northeurope stSku=Basic"
+          parameters: "stSku=Basic"
           failOnStdErr: false
 
       - name: Validate the Bicep file
